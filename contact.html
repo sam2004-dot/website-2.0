@@ -10,67 +10,86 @@
      <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
-<body>
- <nav class="container-fluid">
- <ul class="nav justify-content-center text-dark bg-light">
-  <li class="nav-item">
+<body class="d-flex flex-column min-vh-100">
+
+ <nav class="container-fluid bg-light py-2 d-flex alin-items-center">
+        <img src="./assets/images/ChatGPT Image Feb 14, 2026, 03_38_10 PM.png" alt="logo" class="img-fluid " width="120px" height="auto">
+
+  <ul class="nav mb-0 position-absolute start-50 translate-middle-x">
+      <li class="nav-item ">
     <a class="nav-link text-dark" aria-current="page" href="./index.html">home</a>
   </li>
   <li class="nav-item">
     <a class="nav-link text-dark" href="./portfolio.html">Portfolio</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link text-dark" href="./contact.html">Contact</a>
-  </li>
-  <li class="nav-item">
     <a class="nav-link text-dark" href="./naam.html">over</a>
   </li>
-</ul>
+  <li class="nav-item">
+    <a class="nav-link text-dark" href="./contact.html">Contact</a> 
+  </li>
+  </ul>
+  <span class="ms-auto">
+    <i class="bi bi-person-circle fs-5 me-2"></i>Sam Langers
+  </span>
 </nav>
-<header class="row m-5">
-    <h1 class="col display-3 text-center">contacteer mij via het forum</h1>
-</header>
-   <main class="container">
-    <div class="row">
-    <form class="row g-3 needs-validation" novalidate>
-  <div class="col-md-4">
-    <label for="validationCustom01" class="form-label">voornaam</label>
-    <input type="text" class="form-control" id="validationCustom01"  required>
-  </div>
-  <div class="col-md-4">
-    <label for="validationCustom02" class="form-label">achternaam</label>
-    <input type="text" class="form-control" id="validationCustom02" required>
-  </div>
-  <div class="col-md-6">
-    <label for="validationCustom03" class="form-label">stad</label>
-    <input type="text" class="form-control" id="validationCustom03" required>
-  </div>
-  </div>
-  <div class="col-md-3">
-    <label for="validationCustom05" class="form-label">email</label>
-    <input type="text" class="form-control" id="validationCustom05" required>
-  </div>
-  <div class="col-12">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-      <label class="form-check-label" for="invalidCheck">
-        submit
-      </label>
+
+<main class="container py-5 flex-grow-1">
+    <h1 class="mb-2">Contact</h1>
+    <p class="text-muted mb-4">vul het formulier in om contact met mij op te nemen.</p>
+
+    <section class="row g-4">
+
+      <form class="col-12 col-md-7 row g-3 needs-validation" name="contact" netlify data-netlify="true" method="POST" novalidate>
+        
+      <div class="col-md-6">
+        <label for="voornaam" class="form-label">Voornaam</label>
+        <input type="text" class="form-control" id="voornaam" name="voornaam" required>
+      </div> 
+
+      <div class="col-md-6">
+        <label for="achternaam" class="form-label">Achternaam</label>
+        <input type="text" class="form-control" id="achternaam" name="achternaam" required>
+      </div> 
+
+      <div class="col-md-6">
+        <label for="stad" class="form-label">Stad</label>
+        <input type="text" class="form-control" id="stad" name="stad" required>
+      </div> 
+      
+      
+      <div class="col-md-6">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+      </div> 
+
+    <div class="col-12">
+      <label for="bericht" class="form-label">Bericht</label>
+      <textarea class="form-control" id="bericht" name="bericht" rows="4" required></textarea>
     </div>
+
+    <div class="col-12">
+      <button type="submit" class="btn btn-dark px-4">Versturen</button>
+    </form>
   </div>
-  <div class="col-12">
-    <button class="btn btn-primary" type="submit">submit</button>
-  </div>
-</form>
-<div class="contact-info">
-                <h2>Andere Contactmogelijkheden</h2> <p><strong>E-mail:</strong> <a href="mailto:langers.sam@gmail.com">langers.sam@gmail.com</a></p>
-                <p><strong>Telefoon:</strong> +32 498 53 60 79</p>
-                </div>
-    </section>
-    <aside class="col-12 col-md-4">    
+  <aside class="col-12 col-md-4 offset-md-1">
+      <h5 class="mb-3">Contact Informatie</h5>
+      <ul class="list-unstyled">
+        <li class="mb-3"><i class="bi bi-envelope me-2"></i> sam.langers@gmail.com</li>
+        <li class="mb-3"><i class="bi bi-telephone me-2"></i> +32 498536079</li>
+        <li class="mb-3"><i class="bi bi-geo-alt me-2"></i> Belgie,Antwerpen</li>
+      </ul>
     </aside>
-</div> 
+
+</section>
 </main>
+
+<footer class="mt-auto bg-light py-4 text-center">
+        <p class="mb-0 text-muted">
+            &copy; 2026 Sam Langers. All rights reserved.
+        </p>
+</footer>
 </body>
 </html>
