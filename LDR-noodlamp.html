@@ -11,27 +11,33 @@
 </head>
     <body class="d-flex flex-column min-vh-100">
 
- <nav class="container-fluid py-2 d-flex align-items-center">
-        <img src="./assets/images/logo.png" alt="logo" width="120px" height="auto">
-
-  <ul class="nav mb-0 position-absolute start-50 translate-middle-x">
-      <li class="nav-item ">
-    <a class="nav-link" href="./index.html">home</a>
+<nav class="navbar navbar-expand-md container-fluid py-2">
+    <img src="./assets/images/logo.png" alt="logo" width="120" height="auto">
+ 
+    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+ 
+  <div class="collapse navbar-collapse" id="navMenu">
+  <ul class="navbar-nav mx-auto">
+  <li class="nav-item">
+  <a class="nav-link fw-bold" href="./index.html">home</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./naam.html">over</a>
+  <a class="nav-link" href="./naam.html">over</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./portfolio.html">Portfolio</a>
+  <a class="nav-link" href="./portfolio.html">Portfolio</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./contact.html">Contact</a> 
+  <a class="nav-link" href="./contact.html">Contact</a>
   </li>
-  </ul>
-  
-  <span class="ms-auto">
-    <i class="bi bi-person-circle fs-5 me-2"></i>Sam Langers
-  </span>
+</ul>
+        <span class="navbar-text">
+            <i class="bi bi-person-circle fs-5 me-2"></i>Sam Langers
+        </span>
+    </div>
+</nav>
 </nav>
 
 <main class="container py-2 flex-grow-1">
@@ -71,5 +77,11 @@
     </aside>
 </section>
 </main>
+<footer class="mt-auto py-4 text-center">
+        <p class="mb-0">
+            &copy; 2026 Sam Langers. All rights reserved.
+        </p>
+    </footer>
+<script src="./JS/script.js"></script>
 </body>
 </html>

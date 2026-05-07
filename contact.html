@@ -9,33 +9,36 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/fonts.css">
 </head>
 
 <body class="d-flex flex-column min-vh-100">
 
- <nav class="container-fluid py-2 d-flex align-items-center">
-        <img src="./assets/images/logo.png" alt="logo" width="120px" height="auto">
-
-  <ul class="nav mb-0 position-absolute start-50 translate-middle-x">
-      <li class="nav-item ">
-    <a class="nav-link" href="./index.html">home</a>
+ <nav class="navbar navbar-expand-md container-fluid py-2">
+    <img src="./assets/images/logo.png" alt="logo" width="120" height="auto">
+ 
+    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+ 
+  <div class="collapse navbar-collapse" id="navMenu">
+  <ul class="navbar-nav mx-auto">
+  <li class="nav-item">
+  <a class="nav-link" href="./index.html">home</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./naam.html">over</a>
+  <a class="nav-link" href="./naam.html">over</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./portfolio.html">Portfolio</a>
+  <a class="nav-link" href="./portfolio.html">Portfolio</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./contact.html">Contact</a> 
+  <a class="nav-link fw-bold" href="./contact.html">Contact</a>
   </li>
-  </ul>
-  
-  <span class="ms-auto">
-    <i class="bi bi-person-circle fs-5 me-2"></i>Sam Langers
-  </span>
+</ul>
+        <span class="navbar-text">
+            <i class="bi bi-person-circle fs-5 me-2"></i>Sam Langers
+        </span>
+    </div>
 </nav>
 
 <main class="container py-5 flex-grow-1">
@@ -59,7 +62,7 @@
       </div> 
 
       <div class="col-md-6">
-        <label for="E-mail" class="form-label">E-mail</label>
+        <label for="email" class="form-label">E-mail</label>
         <input type="email" class="form-control" id="email" name="email" placeholder="@" required>
         <div class="invalid-feedback">Vul een geldig E-mail in.</div>
       </div> 
@@ -75,14 +78,13 @@
       <label for="bericht" class="form-label">Bericht</label>
       <textarea class="form-control" id="bericht" name="bericht" rows="4" required></textarea>
     </div>
-    <div class="form-group">
-          <div data-netlify-recaptcha="true"></div>
-        </div>
+
     <div class="col-12">
       <button type="submit" class="btn btn-outline-light px-4">Versturen</button>
   </div>
   </form>
-     <aside class="col-12 col-md-3">
+
+     <aside class="col-12 col-md-4 offset-md-1">
       <h5 class="mb-3">Informatie</h5>
       <ul class="list-unstyled">
         <li class="mb-3">

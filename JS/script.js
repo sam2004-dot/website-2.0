@@ -24,3 +24,34 @@ if (kaartElement) {
         .bindPopup('<b>Sam Langers</b><br>Antwerpen, België')
         .openPopup();
 }
+
+// Zoom on hover
+document.querySelectorAll('article img').forEach(img => {
+    img.addEventListener('mouseover', () => {
+        img.style.transform = 'scale(1.03)';
+        img.style.transition = 'transform 0.3s ease';
+    });
+    img.addEventListener('mouseout', () => {
+        img.style.transform = 'scale(1)';
+    });
+
+    // Klik voor fullscreen
+    img.addEventListener('click', () => {
+        const overlay = document.createElement('div');
+        overlay.style.cssText = `
+            position: fixed; top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.9);
+            display: flex; align-items: center;
+            justify-content: center;
+            z-index: 9999; cursor: zoom-out;
+        `;
+        const grootImg = document.createElement('img');
+        grootImg.src = img.src;
+        grootImg.style.cssText = 'max-width: 90%; max-height: 90vh; border-radius: 8px;';
+        overlay.appendChild(grootImg);
+        document.body.appendChild(overlay);
+
+        overlay.addEventListener('click', () => overlay.remove());
+    });
+});
