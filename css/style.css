@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
-/* ALGEMEEN */
+
 body {
     font-family: 'Roboto', sans-serif;
     background-image: url('../assets/images/achtergrond.jpg');
@@ -11,7 +11,7 @@ body {
     color: white;
 }
 
-/* NAVBAR */
+
 nav {
     background-color: rgba(0, 0, 0, 0.2) !important;
 }
@@ -28,7 +28,7 @@ nav a, nav span {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-/* Collapse alleen donker op mobiel */
+
 @media (max-width: 768px) {
     .navbar-collapse {
         background-color: rgba(0, 0, 0, 0.2);
@@ -38,7 +38,7 @@ nav a, nav span {
     }
 }
 
-/* CARDS */
+
 .card-img-top {
     height: 200px;
     object-fit: cover;
@@ -51,7 +51,7 @@ nav a, nav span {
 }
 
 
-/* FOOTER */
+
 footer {
     background-color: rgba(0, 0, 0, 0.2) !important;
     color: white !important;
